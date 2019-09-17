@@ -1,39 +1,48 @@
+/* Default use:
+  @include min-(width,4,240);
 
+  use width calculation
+  @include min-(width,4,240,'calc(100% - 240px)');
+*/
 html,
 body {
   background-color: black;
 }
+
 .container {
   height: 100vh;
   overflow: hidden;
   overflow-y: auto;
-  perspective: 3px;
+  -webkit-perspective: 3px;
+          perspective: 3px;
 }
 
 section {
   background-size: cover;
-  color: white;
+  color: rgb(111, 255, 92);
   background-color: var(--bg, --color-black);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  &.image {
-    background-position: center center;
-    transform: translateZ(-1px) scale(1.5);
-    /* Force the background image to fill the whole element. */
-    background-size: cover;
-    /* Keep the image from overlapping sibling elements. */
-    z-index: -1;
-    height: 100vh;
-  }
-  &.text {
-    height: 50vh;
-  }
-  &.heading {
-    z-index: -1;
-    transform: translateY(-30vh) translateZ(1px) scale(1.5);
-  }
+}
+section.image {
+  background-position: center center;
+  -webkit-transform: translateZ(-1px) scale(1.5);
+          transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: cover;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+  height: 100vh;
+}
+section.text {
+  height: 50vh;
+}
+section.heading {
+  z-index: -1;
+  -webkit-transform: translateY(-30vh) translateZ(1px) scale(2);
+          transform: translateY(-30vh) translateZ(1px) scale(2);
 }
 
 .footer {
@@ -45,8 +54,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  h3{
-    font-weight: normal; 
-    color: var(--color-blue);
-  }
+}
+.footer h3 {
+  font-weight: normal;
+  color: var(--color-blue);
 }
