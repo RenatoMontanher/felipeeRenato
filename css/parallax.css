@@ -19,7 +19,7 @@ body {
 
 section {
   background-size: cover;
-  color: rgb(111, 255, 92);
+  color: white;
   background-color: var(--bg, --color-black);
   position: relative;
   display: flex;
@@ -41,8 +41,8 @@ section.text {
 }
 section.heading {
   z-index: -1;
-  -webkit-transform: translateY(-30vh) translateZ(1px) scale(2);
-          transform: translateY(-30vh) translateZ(1px) scale(2);
+  -webkit-transform: translateY(-30vh) translateZ(1px) scale(1.5);
+          transform: translateY(-30vh) translateZ(1px) scale(1.5);
 }
 
 .footer {
